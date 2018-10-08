@@ -6,17 +6,29 @@ const arrayUniques = arr => arr.sort().filter( (item, pos, arr) => !pos || item 
 const frequency = (keyArr, itemsArr) => keyArr.map(item => [item, itemsArr.filter(elem => elem == item).length] );
 const buildTable = (arr, elementID) => arr.forEach(item => document.getElementById(elementID).innerHTML += `<div class="tr"><div class="td">${item[1]}</div><div class="td">${item[0]}</div></div>`);
 
-/* CORE IMPLEMENTATION */
-const parseHTML = event => {
-    updateElement('parse-me', event.target.value);
+/* COMMON IMPLEMENTATION */
+const parseContents = (content) => {
+    updateElement('parse-me', content);
     const itemsArr = nodesToValuesCleaned( createArrayFromSelector('.orderNameLetter, .orderDetailsLetter > ul > li') );
     const keyArr = arrayUniques(itemsArr);
     buildTable( frequency(keyArr, itemsArr), 'results');
 }
 
+/* FUNCTIONS TO EXTRACT CONTENT */
+const loadInputFieldContent = event => {
+    parseContents(event.target.value);
+}
+
+function loadFileContent(event) {
+    const reader = new FileReader();
+    reader.onload = () => parseContents(reader.result);
+    reader.readAsText( event.target.files[0] );
+}
+
 /* ON LOAD FUNCTIONS */
 const eventListenerMap = [
-    {selector: document.getElementById('html-input'), eventType: 'input', function: parseHTML},
+    {selector: document.getElementById('html-input'), eventType: 'input', function: loadInputFieldContent},
+    {selector: document.getElementById('file-input'), eventType: 'change', function: loadFileContent}
 ].forEach(item => item.selector.addEventListener(item.eventType, item.function, false));
 
 window.addEventListener('DOMContentLoaded', eventListenerMap, false);

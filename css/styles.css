@@ -69,9 +69,19 @@ h1, h2, h3, h4 {
 }
 
 /* FORM */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+form .input-container {
+    max-width: 29rem;
+}
+
 label, .title {
     display: block;
-    background: var(--color-emphasis);
+    background: rgba(255,204,188,.8);
     color: black;
     padding: 0.5rem 1rem;
     margin: 2rem 0 1rem 0;
@@ -81,6 +91,11 @@ textarea {
     width: calc(100% - 1rem);
     margin: auto;
     min-height: 8rem;
+}
+
+p.instructions {
+    background: rgba(0,0,0,.12);
+    padding: 1rem;
 }
 
 /* RESULTS TABLE */

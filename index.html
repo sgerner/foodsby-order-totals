@@ -16,13 +16,21 @@
 
 <body id="body">
     <header>
-        <h1>Total Item Quantities for Foodsby Orders</h1>
+        <h1>Quantities for Foodsby Orders</h1>
         <p>This webpage allows Foodsby restaurant partners to upload their daily orders and generate a list of the total quantity for each item.</p>
     </header>
     <main>       
         <form>
-            <label for="html-input"><h2>Paste Order HTML to Parse</h2></label>
-            <textarea id="html-input"></textarea>
+            <div class="input-container">
+                <label for="html-input"><h2>Paste Order HTML to Parse</h2></label>
+                <p class="instructions">Select 'All Meals' to view receipts / labels for all meals. Right-click in popup and select 'View Page Source'. Copy and paste all the content in the new tab into this input box.</p>
+                <textarea id="html-input"></textarea>
+            </div>
+            <div class="input-container">
+                <label for="file-input"><h2>Select Saved HTML File</h2></label>
+                <p class="instructions">Select 'All Meals' to view receipts / labels for all meals. Right-click in popup and select 'Save As'. Save the page to your device and use the file upload button below.</p>
+                <input type="file" id="file-input" />
+            </div>
         </form>
         <h2 class="title">>> Order Quantities >></h2>
         <div id="results"></div>
