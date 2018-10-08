@@ -133,3 +133,25 @@ p.instructions {
 #results .tr:nth-child(even) {
     background: rgba(255,204,188,.5);
 }
+
+/* PRINT BUTTON */
+#print a {
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-neutral);
+    background: var(--color-emphasis);
+    padding: 0.5rem 1rem;
+    display: block;
+    margin: 1rem auto;
+    box-shadow: 0px 0px 0.5rem var(--color-dark);
+    transition: 300ms all ease;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+
+#print a:hover {
+    background: var(--color-dark);
+    box-shadow: 0px 0px 0.5rem var(--color-accent);
+    color: white;
+}

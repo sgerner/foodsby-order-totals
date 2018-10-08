@@ -1,0 +1,32 @@
+@media print {
+    @page {
+        margin: 4mm;
+        /* size: landscape;*/
+    }
+
+    :root {
+        --color-neutral: #000;
+        --color-dark: #000;
+        --color-emphasis: #000;
+        --color-accent: #000;
+    }
+
+    html, body {
+        background: unset;
+    }
+
+    header, p.photo-credit, form, #print {
+        display: none;
+    }
+
+    #results {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #results .tr {
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+        padding: 0.75rem 1rem;
+    }
+}
