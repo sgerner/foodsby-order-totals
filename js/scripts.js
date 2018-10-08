@@ -4,7 +4,7 @@ const createArrayFromSelector = selectorName => Array.from(document.querySelecto
 const nodesToValuesCleaned = arr => arr.map(item => item.innerHTML.replace(/-(.*)/,'').trim()); // Creates array of innerHTML from nodes, removes anything after '-' and trims whitespace
 const arrayUniques = arr => arr.sort().filter( (item, pos, arr) => !pos || item != arr[pos - 1]); // Returns array of all unique values
 const frequency = (keyArr, itemsArr) => keyArr.map(item => [item, itemsArr.filter(elem => elem == item).length] );
-const buildTable = (arr, elementID) => arr.forEach(item => document.getElementById(elementID).innerHTML += `<tr><td>${item[0]}</td><td>${item[1]}</td></tr>`);
+const buildTable = (arr, elementID) => arr.forEach(item => document.getElementById(elementID).innerHTML += `<div class="tr"><div class="td">${item[1]}</div><div class="td">${item[0]}</div></div>`);
 
 /* CORE IMPLEMENTATION */
 const parseHTML = event => {
