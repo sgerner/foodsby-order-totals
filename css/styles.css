@@ -103,18 +103,18 @@ textarea {
 }
 
 #results .tr {
-    display: table-row;
+    padding: 0.5rem 1rem;
 }
 
 #results .td {
-    padding: 0.5rem 1rem;
+    padding: 0 0.35rem;
     display: table-cell
 }
 
 #results .tr:nth-child(odd) {
-    background: var(--color-neutral);
+    background: rgba(211, 227, 252,.5);
 }
 
 #results .tr:nth-child(even) {
-    background: rgba(255,204,188,.7);
+    background: rgba(255,204,188,.5);
 }
