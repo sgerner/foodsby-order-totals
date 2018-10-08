@@ -1,0 +1,120 @@
+/* PAGE */
+:root {
+    --color-neutral: #d3e3fc;
+    --color-dark: #77A6F7;
+    --color-emphasis: #FFCCBC;
+    --color-accent: #00887A;
+    --color-text: #fff;
+}
+
+html {
+    background: url(../img/background.jpg) no-repeat center bottom fixed;
+    background-size: cover;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    background: linear-gradient(327deg, rgba(0,136,122,.85) 50%, rgba(119, 166, 247, .85) 50%) fixed;
+    min-height: 100vh;
+    height: 100%;
+}
+
+header {
+    max-width: 60rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: rgba(0,0,0,.6);
+    color: var(--color-emphasis);
+    display: inline-block;
+    border: 1px solid #000;
+}
+
+
+main {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+#parse-me {
+    display: none;
+}
+
+p.photo-credit {
+    background: rgba(255,255,255,.3);
+    padding: 0.5rem;
+    display: block;
+    width: 13rem;
+    margin: auto;
+}
+
+.photo-credit a {
+    color: var(--color-emphasis);
+    text-decoration: none;
+}
+
+/* FONT */
+body {
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+    color: var(--color-text);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: 0;
+}
+
+/* FORM */
+label, .title {
+    display: block;
+    background: var(--color-emphasis);
+    color: black;
+    padding: 0.5rem 1rem;
+    margin: 2rem 0 1rem 0;
+}
+
+textarea {
+    width: calc(100% - 1rem);
+    margin: auto;
+    min-height: 8rem;
+}
+
+/* RESULTS TABLE */
+#results {
+    margin: 1rem auto;
+    text-align: left;
+    background: rgba(255,255,255,.7);
+    color: black;
+    border: 1px solid black;
+    border-collapse: collapse;
+    display: inline-block;
+}
+
+@media (min-width: 715px) {
+    #results {
+        column-count: 2;
+        display: inline-block;
+        column-gap: 0;
+    }
+}
+
+#results .tr {
+    padding: 0.5rem 1rem;
+}
+
+#results .td {
+    padding: 0 0.35rem;
+    display: table-cell
+}
+
+#results .tr:nth-child(odd) {
+    background: rgba(211, 227, 252,.5);
+}
+
+#results .tr:nth-child(even) {
+    background: rgba(255,204,188,.5);
+}

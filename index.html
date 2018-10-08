@@ -10,18 +10,23 @@
 
     <link rel="stylesheet" href="css/styles.css?v=1.0">
     <link rel="stylesheet" href="css/print.css?v=1.0" type="text/css" media="print">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans">
 </head>
 
 <body id="body">
-    <main>
+    <header>
         <h1>Total Item Quantities for Foodsby Orders</h1>
         <p>This webpage allows Foodsby restaurant partners to upload their daily orders and generate a list of the total quantity for each item.</p>
+    </header>
+    <main>       
         <form>
-            <label for="html-input">Paste Order HTML to Parse</label>
-            <textarea id="html-input" rows="5"></textarea>
+            <label for="html-input"><h2>Paste Order HTML to Parse</h2></label>
+            <textarea id="html-input"></textarea>
         </form>
-        <table id="results"></table>
+        <h2 class="title">>> Order Quantities >></h2>
+        <div id="results"></div>
+        <p class="photo-credit">Photo by <a href="https://unsplash.com/photos/FH3nWjvia-U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tim Mossholder</a></p>
     </main>
     <div id="parse-me"></div>
     <script type="text/javascript" src="js/scripts.js?v=0"></script>
